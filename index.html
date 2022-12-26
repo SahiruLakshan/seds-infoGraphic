@@ -17,69 +17,124 @@
 
 .centered {
     position: absolute;
-    top: 70%;
+    top: 80%;
     left: 50%;
     transform: translate(-50%, -50%);
     border: solid white 3px;
-    border-radius: 40%;
-    padding: 7px 30px;
-    visibility:hidden;
+    border-radius: 10%;
+    padding: 7px 10px;
+    background: rgba(255, 255, 255, 0.7);
+
 
 }
 #InfoGraphic{
     text-align :center;
 }
-
+.centered a {
+    color: white;
+    text-decoration: none;
+}
 </style>
 <section id="InfoGraphic">
+    <h1>InfoGraphic Post</h1>
+    <hr/>
     <div class="container">
-        <div class="row d-flex justify-content-around my-3 py-3">
+        <div class="row d-flex justify-content-around my-1 py-1">
 
-            <div class="col-5 border p-2 rounded">
-                <figure class="figure " ondclick="" >
-                    <div class="relative_div" onmouseover="showLink(event,this)" onmouseout="hideLink(event,this)">
-                        <img src="img_lights.jpg" class="figure-img img-fluid rounded" alt="...">
 
-                        <div class="centered" onclick="">Centered</div>
+            <div class="col-5 border p-1 rounded">
+                <div class="relative_div" >
+                        <embed src="img_lights.jpg"
+                               frameborder="0" width="100%" height="100%">
+
+
+
+                    <div class="centered" style="left: 37%;">
+                        <a href=""  data-bs-toggle="modal"   data-bs-target="#staticBackdrop">
+                            <span> <img src="expand-screen.png" width="30px" style="margin-right:5px; " alt=""/> </span>   Expand
+                        </a>
                     </div>
-                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                </figure>
 
-
-
-
+                    <div class="centered"  style="left: 63%;" onclick="">
+                        <a href="img_lights.jpg"  role="button" aria-pressed="true" download>
+                            <span> <img src="file.png" width="30px" alt=""/> </span>Download
+                        </a>
+                    </div>
+                </div>
             </div>
-            <div class="col-5">
-                <figure class="figure">
-                    <img src="img_lights.jpg" class="figure-img img-fluid rounded" alt="...">
-                    <figcaption class="figure-caption">A caption for the above image.</figcaption>
-                </figure>
 
+
+            <div class="col-5 border p-1 rounded">
+                <div class="relative_div" >
+                    <embed src="img_lights.jpg"
+                           frameborder="0" width="100%" height="100%">
+
+
+
+                    <div class="centered" style="left: 37%;">
+                        <a href=""  data-bs-toggle="modal"   data-bs-target="#staticBackdrop2">
+                            <span> <img src="expand-screen.png" width="30px" style="margin-right:5px; " alt=""/> </span>   Expand
+                        </a>
+                    </div>
+
+                    <div class="centered"  style="left: 63%;" onclick="">
+                        <a href="AM2003_2018c1.pdf"  role="button" aria-pressed="true" download>
+                            <span> <img src="file.png" width="30px" alt=""/> </span>Download
+                        </a>
+                    </div>
+                </div>
             </div>
+
+
+
+
+
+
         </div>
 
     </div>
 
-    <script>
-        function showLargeView(element){
-            element.setAttribute('class','displayLarge')
 
-        }
 
-        function showNormalView(element){
-            element.setAttribute('class','displayLarge')
+    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel">InfoGraphic Post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <embed src="img_lights.jpg"
+                           frameborder="0" width="100%" height="500px">
+                </div>
+            </div>
+        </div>
+    </div>
 
-        }
 
-        function showLink(e,element){
-            element.children[1].style.visibility = "visible";
-        }
-        function hideLink(e,element){
-            element.children[1].style.visibility = "hidden";
-        }
+    <div class="modal fade" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="staticBackdropLabel2">InfoGraphic Post</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <embed src="AM2003_2018c1.pdf"
+                           frameborder="0" width="100%" height="500px">
+                </div>
+            </div>
+        </div>
+    </div>
 
-    </script>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.min.js" integrity="sha384-cuYeSxntonz0PPNlHhBs68uyIAVpIIOZZ5JqeqvYYIcEL727kskC66kF92t6Xl2V" crossorigin="anonymous"></script>
+
 </section>
+
 
 </body>
 </html>
